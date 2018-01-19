@@ -1,0 +1,7 @@
+Flask
+Flask-RESTful
+Flask-SQLAlchemy
+passlib
+flask-jwt-extended
+flask_limiter
+mysql-connector-python
