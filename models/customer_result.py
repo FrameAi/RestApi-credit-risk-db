@@ -8,7 +8,7 @@ class CustomerResultModel(db.Model):
     __tablename__ = 'customer_results'
 
     id = db.Column(db.Integer(), primary_key=True, autoincrement = True)
-    probability_of_default_next_month = db.Column(db.Numeric(precision=2, asdecimal=False, decimal_return_scale=None))
+    probability_of_default_next_month = db.Column(db.Numeric(precision=2, scale=2, asdecimal=False, decimal_return_scale=None))
     feedback_did_default = db.Column(db.Boolean(), nullable=True)
     
     # One to One bidirectional (one customer_result to one customer)
