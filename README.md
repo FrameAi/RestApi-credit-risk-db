@@ -60,7 +60,7 @@ Mac OS:
 
 Display your environment variables
 ```
-venv
+env
 ```
 
 Create environment variables `DATABASE_URL` (format: `mysql+mysqlconnector://username:password@host:port/database`) and `AI_CHAT_SECRET_KEY` (format: `supersecretkey`)
