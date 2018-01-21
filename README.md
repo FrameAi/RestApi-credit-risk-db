@@ -56,14 +56,14 @@ $ pip install -r /path/to/requirements.txt
 
 ### Create environment variables
 
-Mac OS:
+**Mac OS**:
 
 Display your environment variables
 ```
 env
 ```
 
-Create environment variables `DATABASE_URL` (format: `mysql+mysqlconnector://username:password@host:port/database`) and `AI_CHAT_SECRET_KEY` (format: `supersecretkey`)
+Create environment variables `DATABASE_URL` (format: `mysql+mysqlconnector://username:password@host:port/databaseSchema`) and `CONSUMER_RISK_SECRET_KEY` (format: `supersecretkey`)
 using:
 
 ```
