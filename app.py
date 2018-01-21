@@ -1,5 +1,5 @@
 import os # to import credentials from env variables on the machine
-import mysql-connector-python # driver for MySQL
+import mysql.connector # driver for MySQL
 #import mysql.connector
 from flask import Flask
 from flask_restful import Api
@@ -26,16 +26,16 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:/
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Setup the Flask-JWT-Extended extension (The secret key is needed to keep the client-side sessions secure)
-app.secret_key = os.environ.get('AI_CHAT_SECRET_KEY')
+app.secret_key = os.environ.get('CONSUMER_RISK_SECRET_KEY')
 jwt = JWTManager(app)
 
 
 # SqlAlchemy can create db for us
 # Use flask decorator 
 # before first request run: app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db' unless it already exists
-# @app.before_first_request
-# def create_tables():
-#     db.create_all() # only creates tables that it sees
+@app.before_first_request
+def create_tables():
+    db.create_all() # only creates tables that it sees
 
 
 
